@@ -1,0 +1,6 @@
+# Optional
+.env
+.env.local
+
+# Local development
+server.pem
