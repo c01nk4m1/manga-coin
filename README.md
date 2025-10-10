@@ -72,6 +72,14 @@ This site is automatically deployed to GitHub Pages using GitHub Actions when ch
    ```
 4. Open `http://localhost:8080` in your browser
 
+### Update Versioning
+1. To force browsers to load the latest CSS and JS files after updates, update the version query parameter in the HTML file:
+```html
+<link rel="stylesheet" href="./css/styles.css?v=1.0.0">
+<script src="./js/main.js?v=1.0.0"></script>
+```
+2. Update sitemap.xml if necessary
+
 ## 📱 Features
 
 - **Responsive Design:** Looks great on all devices

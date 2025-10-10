@@ -106,11 +106,11 @@ function createTokenomicsChart() {
     if (!chartContainer) return;
 
     const data = [
-        { label: 'Founders', value: 35, color: '#ff6b6b' },
+        { label: 'Pre Sales', value: 10, color: '#f9ca24' },
+        { label: 'Founders', value: 30, color: '#ff6b6b' },
         { label: 'Treasury', value: 20, color: '#4ecdc4' },
-        { label: 'Staking Reserve', value: 15, color: '#45b7d1' },
-        { label: 'OTC Sales', value: 10, color: '#f9ca24' },
-        { label: 'Liquidity Pool', value: 10, color: '#6c5ce7' },
+        { label: 'Staking Reserve', value: 10, color: '#45b7d1' },
+        { label: 'Liquidity Pool', value: 20, color: '#6c5ce7' },
         { label: 'Partnerships', value: 5, color: '#a29bfe' },
         { label: 'Listings', value: 5, color: '#fd79a8' }
     ];
@@ -304,7 +304,7 @@ console.log(`
 🎌 MANGA COIN 🎌
 ┌─────────────────────────────────────┐
 │  Welcome to the MANGA COIN website! │
-│  Contract: 0x2987D36a348...Bd5Ba13   │
+│  Contract: 0x2987D36a348...Bd5Ba13  │
 │  Total Supply: 69,000,000,000 MANGA │
 │  Made with ❤️ by the community      │
 └─────────────────────────────────────┘
