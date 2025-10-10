@@ -45,25 +45,42 @@ body {
 /* Simple Icons */
 .icon {
     display: inline-block;
-    width: 1em;
-    height: 1em;
     vertical-align: middle;
 }
 
 .icon-coins::before {
-    content: '🪙';
+    content: '';
+    background-image: url('../assets/mangacoin.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 1em;
+    height: 1em;
+    display: inline-block;
 }
 
 .icon-bars::before {
     content: '≡';
 }
 
-.icon-exchange::before {
-    content: '🔄';
+.icon-exchange {
+    content: '';
+    background-image: url('../assets/shido.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-items: center;
+    width: 50px;
+    height: 50px;
 }
 
-.icon-chart::before {
-    content: '📈';
+.icon-chart {
+    content: '';
+    background-image: url('../assets/blockchain-icon.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-items: center;
+    width: 45px;
+    height: 45px;
 }
 
 .icon-users::before {
@@ -86,12 +103,25 @@ body {
     content: '❤️';
 }
 
-.icon-ninja::before {
-    content: '🥷';
+.icon-ninja {
+    content: '';
+    background-image: url('../assets/mangacoin.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-items: center;
+    width: 100px;
+    height: 100px;
 }
 
-.icon-dragon::before {
-    content: '🐲';
+.icon-dragon {
+    content: '';
+    background-image: url('../assets/chick.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
 }
 
 .icon-search::before {
@@ -627,7 +657,6 @@ body {
     align-items: center;
     justify-content: center;
     margin: 0 auto 1.5rem;
-    font-size: 2.5rem;
     color: white;
 }
 
