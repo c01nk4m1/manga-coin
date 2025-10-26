@@ -312,6 +312,40 @@ console.log(`
 🚀 To the moon! 🌙
 `);
 
+// Countdown Timer
+function initCountdownTimer() {
+    const targetDate = new Date('2025-10-27T20:00:00+02:00'); // 27.10.2025 20:00 MEZ (UTC+2)
+    const countdownElement = document.getElementById('countdown-timer');
+    
+    function updateCountdown() {
+        const now = new Date();
+        const timeDifference = targetDate - now;
+        
+        if (timeDifference <= 0) {
+            countdownElement.textContent = 'LAUNCHED! 🚀';
+            countdownElement.style.color = '#4ecdc4';
+            return;
+        }
+        
+        const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+        
+        // Calculate total hours (including days)
+        const totalHours = days * 24 + hours;
+        
+        countdownElement.textContent = `${totalHours}h ${minutes}m ${seconds}s`;
+    }
+    
+    // Update immediately and then every second
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+}
+
+// Initialize countdown when DOM is loaded
+document.addEventListener('DOMContentLoaded', initCountdownTimer);
+
 // Add performance monitoring
 let startTime = performance.now();
 window.addEventListener('load', () => {

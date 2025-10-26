@@ -68,7 +68,7 @@ This site is automatically deployed to GitHub Pages using GitHub Actions when ch
    ```
 3. Serve the files using python web server:
    ```bash
-   python3 -c "import http.server, ssl, socketserver; httpd = socketserver.TCPServer(('', 8080), http.server.SimpleHTTPRequestHandler); httpd.socket = ssl.wrap_socket(httpd.socket, certfile='./server.pem', server_side=True); print('🚀 HTTPS Server: https://localhost:8080'); httpd.serve_forever()"
+   python3 -c "import http.server, ssl, socketserver; context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER); context.load_cert_chain('./server.pem'); httpd = socketserver.TCPServer(('', 8080), http.server.SimpleHTTPRequestHandler); httpd.socket = context.wrap_socket(httpd.socket, server_side=True); print('🚀 HTTPS Server: https://localhost:8080'); httpd.serve_forever()"
    ```
 4. Open `http://localhost:8080` in your browser
 
