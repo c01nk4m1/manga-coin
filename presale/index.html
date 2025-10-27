@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MANGA COIN - Redirecting to Presale...</title>
+    <title>🎨 MANGA COIN PRESALE LAUNCHED! 🚀</title>
     
     <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:type" content="website">
@@ -29,9 +29,10 @@
     <!-- Additional Social Media Tags -->
     <meta property="article:author" content="MANGA COIN Team">
     <meta name="theme-color" content="#ff6b6b">
+    <link rel="image_src" href="https://manga-shido.casa/assets/manga-social-preview.png">
     
-    <!-- Instant redirect -->
-    <meta http-equiv="refresh" content="0; url=https://factory.shidokid.com/launchpad/v1/0x1969d7183D2Be783516d499378F179Ac13343E7A">
+    <!-- Delayed redirect for social crawlers -->
+    <meta http-equiv="refresh" content="1; url=https://factory.shidokid.com/launchpad/v1/0x1969d7183D2Be783516d499378F179Ac13343E7A">
     
     <!-- Canonical URL for SEO -->
     <link rel="canonical" href="https://factory.shidokid.com/launchpad/v1/0x1969d7183D2Be783516d499378F179Ac13343E7A">
@@ -94,15 +95,30 @@
 <body>
     <div class="redirect-container">
         <div class="loading-spinner"></div>
-        <div class="redirect-text">Redirecting to MANGA COIN Presale...</div>
+        <div class="redirect-text">🎨 MANGA COIN PRESALE LAUNCHED! 🚀<br><small>Redirecting in <span id="countdown">3</span> seconds...</small></div>
         <p>If you are not redirected automatically, <a href="https://factory.shidokid.com/launchpad/v1/0x1969d7183D2Be783516d499378F179Ac13343E7A" class="manual-link">click here</a>.</p>
     </div>
     
     <script>
-        // JavaScript redirect as fallback
+        // Countdown timer for better UX
+        let timeLeft = 1;
+        const countdownElement = document.getElementById('countdown');
+        
+        const countdownTimer = setInterval(function() {
+            timeLeft--;
+            if (countdownElement) {
+                countdownElement.textContent = timeLeft;
+            }
+            if (timeLeft <= 0) {
+                clearInterval(countdownTimer);
+                window.location.href = "https://factory.shidokid.com/launchpad/v1/0x1969d7183D2Be783516d499378F179Ac13343E7A";
+            }
+        }, 1000);
+        
+        // Fallback redirect
         setTimeout(function() {
             window.location.href = "https://factory.shidokid.com/launchpad/v1/0x1969d7183D2Be783516d499378F179Ac13343E7A";
-        }, 100);
+        }, 3000);
     </script>
 </body>
 </html>
