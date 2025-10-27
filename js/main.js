@@ -314,7 +314,7 @@ console.log(`
 
 // Countdown Timer
 function initCountdownTimer() {
-    const targetDate = new Date('2025-10-27T20:00:00+02:00'); // 27.10.2025 20:00 MEZ (UTC+2)
+    const targetDate = new Date('2025-10-27T21:00:00+02:00');
     const countdownElement = document.getElementById('countdown-timer');
     
     function updateCountdown() {
